@@ -1,0 +1,61 @@
+.myFlights {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(59, 75, 71);
+}
+
+.myFlights h2 {
+  margin-left: 1px;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #148580;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.deleteButton {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin: 16px auto 0;
+  display: block;
+  max-width: 100%;
+}
+.deleteButton:hover {
+  background-color: #cc0000;
+}
+@media (min-width: 768px) {
+  .deleteButton {
+    max-width: 50%;
+  }
+}
+
+

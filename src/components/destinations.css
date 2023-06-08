@@ -1,0 +1,121 @@
+/* Add a background color to the body */
+.body {
+            margin-top:-22px;
+            background-color: #eaebee;
+            color: rgb(59, 75, 71);
+            font-family: 'Roboto', sans-serif;
+          }
+          .body h1{
+            padding-top:20px;
+            padding-left:1rem;
+          }
+          /* Style the search bar */
+          .search {
+            margin:1rem;
+            display: flex;
+            align-items: space-around;
+            margin-bottom: 20px;
+            gap:1rem;
+          }
+          
+          input[type='text'] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+            flex-grow: 0.9;
+          }
+          
+          select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            flex-grow: 0.1;
+          }
+          /* Style the search bar */
+
+          input[type='text'],
+          select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #d9d9d9; /* Match the background color of the body */
+            color: #0a668e; /* Set the text color */
+            appearance: none; /* Remove the default appearance */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+          }
+          
+          input[type='text']:focus,
+          select:focus {
+            box-shadow: 0 0 0 2px #145d8e; /* Add a blue box shadow when focused */
+            outline: none; /* Remove the default outline */
+          }
+          
+          /* Style the destinations grid */
+          .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+          }
+          
+          /* Style each destination card */
+          .destination {
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            margin:1rem;
+            box-shadow: rgba(7, 86, 113, 0.232) 0px -23px 25px 0px inset, rgba(19, 101, 109, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(33, 184, 184, 0.06) 0px 2px 1px, rgba(15, 128, 234, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            transition: transform 0.2s ease-in-out;
+          }
+          
+          .destination:hover {
+            transform: translateY(-5px);
+          }
+          
+          .destination img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+          
+          .destination-info {
+            padding: 20px;
+          }
+          
+          .destination h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: rgb(59, 75, 71);
+          }
+          
+          .destination p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: rgb(59, 75, 71);
+          }
+          .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+          }
+          
+          .button {
+            background-color: #09b5a2;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+          }
+          
+          .button:hover {
+            background-color: #079c8d;
+          }
