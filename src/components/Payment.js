@@ -10,7 +10,7 @@ function Payment() {
 
   useEffect(() => {
     try {
-      axios.get("http://localhost:5010/api/v1/config").then(async (response) => {
+      axios.get("https://azureTravel.onrender.com/api/v1/config").then(async (response) => {
         const { publishableKey } = response.data;
         setStripePromise(loadStripe(publishableKey));
       });
@@ -21,7 +21,7 @@ function Payment() {
 
   useEffect(() => {
     try {
-      axios.post("http://localhost:5010/api/v1/create-payment-intent", {}).then(async (response) => {
+      axios.post("https://azureTravel.onrender.com/api/v1/create-payment-intent", {}).then(async (response) => {
         var { clientSecret } = response.data;
         setClientSecret(clientSecret);
       });

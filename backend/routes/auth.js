@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { register, login ,userUpdate,getUserAndDestination} = require('../controllers/auth')
+const { register, login ,userUpdate,getUserAndDestination} = require('../backend/controllers/auth')
 
 router.route('/auth/register').post(register)
 router.route('/auth/login').post(login)

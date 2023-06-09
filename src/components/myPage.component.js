@@ -27,7 +27,7 @@ function TripBooking() {
         const userId = parts[6];
         setDestinationId(destinationId);
         setUserId(userId);
-        const response = await axios.get(`http://localhost:5010/api/v1/destination/${destinationId}/user/${userId}`);
+        const response = await axios.get(`https://azureTravel.onrender.com/api/v1/destination/${destinationId}/user/${userId}`);
         const destinationData  = response.data.destination;
         const userData = response.data.user;
         setFirstName(userData.fName);
@@ -44,7 +44,7 @@ function TripBooking() {
 
   const updateUserInfo = async (userInfo) => {
     try { 
-      const response = await axios.patch(`http://localhost:5010/api/v1/destination/${destinationId}/user/${userId}`, userInfo);
+      const response = await axios.patch(`https://azureTravel.onrender.com/api/v1/destination/${destinationId}/user/${userId}`, userInfo);
       const updatedUser = response.data.user;
       alert('User information updated successfully');
       return updatedUser;
@@ -74,11 +74,11 @@ function TripBooking() {
   if (updatedUser) {
     try {
      
-        await axios.post(`http://localhost:5010/api/v1/myFlights/${userId}`, {
+        await axios.post(`https://azureTravel.onrender.com/api/v1/myFlights/${userId}`, {
       
         destinationName: destination.name,
         destinationCurrency: destination.currency,
-        cost: cost,
+        cost: newcost,
         flightDate: flightDate,
         returnDate: returnDate
       });

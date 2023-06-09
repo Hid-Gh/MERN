@@ -6,7 +6,7 @@ class AuthService {
 
   login(email, password) {
     return axios
-      .post('http://localhost:5010/api/v1/auth/login', { email, password })
+      .post('https://azuretravel.onrender.com/api/v1/auth/login', { email, password })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('userId', response.data.userId); // Save the userId in localStorage
@@ -19,7 +19,7 @@ class AuthService {
 
   register(fName, lName, email, nationality, password) {
     return axios
-      .post('http://localhost:5010/api/v1/auth/register', { fName, lName, email, nationality, password })
+      .post('https://azuretravel.onrender.com/api/v1/auth/register', { fName, lName, email, nationality, password })
       .then((response) => {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('userId', response.data.userId); // Save the userId in localStorage

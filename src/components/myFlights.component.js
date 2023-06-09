@@ -15,7 +15,7 @@ function MyFlights() {
         const parts = location.pathname.split('/');
         const userId = parts[2];
         setUserId(userId);
-        const response = await axios.get(`http://localhost:5010/api/v1/myFlights/${userId}`);
+        const response = await axios.get(`https://azuretravel.onrender.com/api/v1/myFlights/${userId}`);
         const data = response.data;
         setBookings(data.flights);
       } catch (error) {
@@ -27,7 +27,7 @@ function MyFlights() {
 
   const handleDeleteAll = async () => {
     try {
-      const response = await axios.delete(`http://localhost:5010/api/v1/myFlights/${userId}`);
+      const response = await axios.delete(`https://azuretravel.onrender.com/api/v1/myFlights/${userId}`);
       console.log(response.data);
       setBookings([]);
     } catch (error) {

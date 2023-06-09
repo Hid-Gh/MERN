@@ -19,7 +19,7 @@ const Destinations = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:5010/api/v1/destination');
+        const response = await axios.get('https://azuretravel.onrender.com/api/v1/destination');
         const { data } = response.data;
         setDestinations(data);
       } catch (error) {
